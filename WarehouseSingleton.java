@@ -23,8 +23,13 @@ public class WarehouseSingleton {
     }
     
     public static WarehouseSingleton initialize(){
+        System.out.println("Initializing Singleton...");
         if(instance == null){
-            instance = new WarehouseSingleton();            
+            instance = new WarehouseSingleton();    
+            System.out.println("Singleton Initialized! \n");
+        }
+        else{
+            System.out.println("Singleton Not Initialized! - Singleton already instantiated!\n");
         }
         return instance;
     }

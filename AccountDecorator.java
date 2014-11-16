@@ -18,9 +18,9 @@ public abstract class AccountDecorator implements Account {
         System.out.println("This is using Decorator");
     }
     
-//    @Override
-//    public void create(String accountName){
-//        decoratedAccount.create(accountName);
-//        System.out.println("This is using Decorator");
-//    }
+    @Override
+    public void create(String accountName){
+        decoratedAccount.create(accountName);
+        System.out.println("This is using Decorator");
+    }
 }

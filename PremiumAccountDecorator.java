@@ -33,7 +33,6 @@ public class PremiumAccountDecorator extends AccountDecorator{
     
     @Override
     public void addProfile(String username){         
-       // ProfileOriginator profile1 = new ProfileOriginator(username);
         this.profiles.add(new ProfileOriginator(username));
         System.out.println("Account: " + accountName + " added new Profile: " + username);        
     }
@@ -47,7 +46,7 @@ public class PremiumAccountDecorator extends AccountDecorator{
         else{
             for(ProfileOriginator profile:profiles)
             {
-                System.out.println(profile);  
+                System.out.println("Premium Account:" + this.accountName + " has Profile: " +  profile.getUsername());  
             }
         }
     }

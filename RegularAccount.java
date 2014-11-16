@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package playon;
+
 /**
  *
  * @author ian
@@ -15,7 +16,7 @@ public class RegularAccount implements Account{
     private String accountName;
     private final String accountType = "Regular Account";
     
-    @Override
+    
     public void create(String accountName){
         Account regularAccount = new RegularAccount();
         this.regularAccount = regularAccount;
@@ -23,8 +24,9 @@ public class RegularAccount implements Account{
         System.out.println("Regular Account ("+accountName+") has been created");
     }
     
-    @Override
+    
     public void addProfile(String username){  
+        System.out.println("Adding Profile...");
         if(this.profile==null){            
             ProfileOriginator regularProfile = new ProfileOriginator(username);
             this.profile = regularProfile;
@@ -35,7 +37,7 @@ public class RegularAccount implements Account{
         }
     }
     
-    @Override
+    
     public void getProfiles(){
         if(this.profile==null){
             System.out.println("Account Name: " + accountName + " has no Profiles added");
